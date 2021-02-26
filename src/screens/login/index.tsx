@@ -1,8 +1,9 @@
 import { FormEvent } from "react";
+const apiUrl = "http://localhost:3001";
 
 export const LoginScreen = () => {
   const login = (params: { username: string; password: string }) => {
-    fetch(`http://localhost:3001/register`, {
+    fetch(`${apiUrl}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
